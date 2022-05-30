@@ -242,6 +242,7 @@ Done in 11.00s.
  vuetify  Support Vuetify: https://github.com/sponsors/johnleider
  ```
 
+ vuetifyプラグインをインストールするといくつかのファイルが追加されたり更新されたりしている。
  ```
 [.] vite-project  
 [.] ├─ public  
@@ -266,7 +267,12 @@ Done in 11.00s.
 [U] ├─ vite.config.ts  
 [M] └─ yarn.lock  
  ```
-
+※[U]追加、[M]更新。
+ 
+vite.config.tsはそのままではESLint+Prettierチェック違反やエラーなどが発生しているので修正する。
+![設定01](https://user-images.githubusercontent.com/97750798/171030553-960bd9f7-990f-449c-8f29-7d45377d778d.png)
+![設定02](https://user-images.githubusercontent.com/97750798/171031067-cfcbb033-6b29-43c1-938c-5e0143d7afc4.png)
+![設定03](https://user-images.githubusercontent.com/97750798/171031102-14512b52-b8d3-4938-99d7-0d8e443b044f.png)
 
 ```
 $ yarn add @vuetify/vite-plugin
