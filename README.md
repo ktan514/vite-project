@@ -175,4 +175,99 @@ Done in 22.64s.
 ```
 
 
+## 2. プラグインの導入
 
+*vuetify*プラグインを追加する。
+```
+$ vue add vuetify
+```
+
+ローカルリポジトリに未コミットの修正ファイルが残っていたら警告が出る。  
+上書きされて問題ない場合はyを選択する。
+```
+ WARN  There are uncommitted changes in the current repository, it's recommended to commit or stash them first.
+? Still proceed? (y/N) 
+```
+
+プラグインがインストールされる。
+```
+📦  Installing vue-cli-plugin-vuetify...
+
+yarn add v1.22.18
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+success Saved lockfile.
+success Saved 5 new dependencies.
+info Direct dependencies
+└─ vue-cli-plugin-vuetify@2.5.0
+info All dependencies
+├─ interpret@1.4.0
+├─ null-loader@4.0.1
+├─ rechoir@0.6.2
+├─ shelljs@0.8.5
+└─ vue-cli-plugin-vuetify@2.5.0
+Done in 4.84s.
+✔  Successfully installed plugin: vue-cli-plugin-vuetify
+```
+
+インストールするプリセットを選択する。
+```
+? Choose a preset: 
+  Configure (advanced) 
+  Default (recommended) 
+> Vite Preview (Vuetify 3 + Vite) 
+  Prototype (rapid development) 
+  Vuetify 3 Preview (Vuetify 3) 
+```
+
+インストールログ。
+```
+🚀  Invoking generator for vue-cli-plugin-vuetify...
+📦  Installing additional dependencies...
+
+yarn install v1.22.18
+[1/4] Resolving packages...
+[2/4] Fetching packages...
+[3/4] Linking dependencies...
+[4/4] Building fresh packages...
+success Saved lockfile.
+Done in 11.00s.
+⚓  Running completion hooks...
+
+✔  Successfully invoked generator for plugin: vue-cli-plugin-vuetify
+ vuetify  Discord community: https://community.vuetifyjs.com
+ vuetify  Github: https://github.com/vuetifyjs/vuetify
+ vuetify  Support Vuetify: https://github.com/sponsors/johnleider
+ ```
+
+ ```
+[.] vite-project  
+[.] ├─ public  
+[U] │  └─ index.html  
+[.] ├─ src  
+[.] │  ├─ assets  
+[U] │  │  └─ logo.svg  
+[.] │  ├─ components  
+[M] │  │  └─ HelloWorld.scss  
+[.] │  ├─ plugins  
+[U] │  │  ├─ vuetify.ts  
+[U] │  │  └─ webfontloader.ts  
+[.] │  ├─ styles  
+[U] │  │  └─ _variables.scss  
+[.] │  ├─ views  
+[M] │  │  └─ HomeView.scss  
+[M] │  ├─ App.vue  
+[M] │  ├─ main.ts  
+[U] │  └─ shims-vuetify.d.ts  
+[U] ├─ index.html  
+[M] ├─ package.json  
+[U] ├─ vite.config.ts  
+[M] └─ yarn.lock  
+ ```
+
+
+```
+$ yarn add @vuetify/vite-plugin
+```
