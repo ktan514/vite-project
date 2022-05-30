@@ -27,9 +27,9 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ___
 
 
-## Setup manual.
+# Setup manual.
 
-### 1. 導入
+## 1. 導入
 
 **yarn**を使ってVueプロジェクを作成する。
 
@@ -37,7 +37,9 @@ ___
 $ vue create vite-project
 ```
 
-
+質問の回答を入力しつつ作成を進める。  
+プロジェクトに必要な機能にカーソル(">")を合わせて<space>キーでチェックを入れる。  
+選択が終わったら<enter>を押下する。  
 ```
 Vue CLI v5.0.4
 ? Check the features needed for your project: (Press <space> to select, <a> to toggle all, <i> to invert selection, and
@@ -53,7 +55,8 @@ Vue CLI v5.0.4
  ( ) E2E Testing
 ```
  
- 
+ プロジェクトで使用するVueのバージョンを選択する。
+ 本プロジェクトはVue3.xを使用する。
 ```
  Vue CLI v5.0.4
 ? Choose a version of Vue.js that you want to start the project with (Use arrow keys)
@@ -61,25 +64,29 @@ Vue CLI v5.0.4
   2.x
 ```
 
-
+TypeScriptで`Class style`(y)と、`Object style`(n)のどちらを使用するかを選択する。  
+最新環境での推奨はObject styleなので本プロジェクトではnを選択する。  
 ```
 Vue CLI v5.0.4
 ? Use class-style component syntax? (y/N) N
 ```
 
-
+Babelを使用する(y)か否(n)かを選択する。  
+Babelはレガシーブラウザ環境との互換性を保管する。  
+要否は特に決めてないがとりあえずyを選択する。  
 ```
 Vue CLI v5.0.4
 ? Use Babel alongside TypeScript (required for modern mode, auto-detected polyfills, transpiling JSX)? (Y/n) Y
 ```
 
-
+routerでHistoryモードを使用するためyを選択する。  
+nを選択するとSharpモードになる。  
 ```
 Vue CLI v5.0.4
 ? Use history mode for router? (Requires proper server setup for index fallback in production) (Y/n) Y
 ```
 
-
+どれでも可。  
 ```
 Vue CLI v5.0.4
 ? Pick a linter / formatter config:
@@ -89,7 +96,7 @@ Vue CLI v5.0.4
 > ESLint + Prettier
 ```
 
-
+どちらでも可。  
 ```
 Vue CLI v5.0.4
 ? Pick additional lint features: (Press <space> to select, <a> to toggle all, <i> to invert selection, and <enter> to
@@ -98,7 +105,8 @@ proceed)
  ( ) Lint and fix on commit
 ```
 
-
+Babel、ESLintなどの構成を個別ファイルに記載するかpackage.jsonにまとめて記載するか選択する。  
+今回はpackage.jsonにまとめて記載する。  
 ```
 Vue CLI v5.0.4
 ? Where do you prefer placing config for Babel, ESLint, etc.?
@@ -106,19 +114,20 @@ Vue CLI v5.0.4
 > In package.json
 ```
 
-
+ここまでの選択状況をプリセットに保存する(y)か否(n)か。  
 ```
 Vue CLI v5.0.4
 ? Save this as a preset for future projects? (y/N) y
 ```
 
-
+プリセットを保存する場合。  
+プリセットの名称。("vite-project-create-profile")  
 ```
 Vue CLI v5.0.4
 ? Save preset as: vite-project-create-profile
 ```
 
-
+依存関係をインストールするときに使用するパッケージマネージャーを選択する。  
 ```
 Vue CLI v5.0.4
 ? Pick the package manager to use when installing dependencies: (Use arrow keys)
@@ -126,7 +135,9 @@ Vue CLI v5.0.4
   Use NPM
 ```
 
-
+以上で設定は完了。  
+ここまでの設定内容でインストールが開始される。
+※`yarn install`も実装されている。
 ```
 Vue CLI v5.0.4
 ✨  Creating project in C:\Users\admin\vite-project.
